@@ -1,0 +1,30 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3867246, 2020-12-16T11:57:38-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Frutiger 45 Light by Linotype
+ * URL: https://www.myfonts.com/products/frutiger-pro-45-light-frutiger-369530
+ * Copyright: Copyright © 2023 Monotype Imaging Inc. All rights reserved.
+ *
+ * Webfont: Frutiger 55 Roman by Linotype
+ * URL: https://www.myfonts.com/products/pro-55-roman-frutiger-369543
+ * Copyright: Copyright © 2023 Monotype Imaging Inc. All rights reserved.
+ * 
+ * © 2023 MyFonts Inc. */
+
+@font-face {
+  font-family: "Frutiger45Light";
+  src: url("fonts/Frutiger45Light/font.woff2") format("woff2"),
+    url("fonts/Frutiger45Light/font.woff") format("woff");
+}
+@font-face {
+  font-family: "Frutiger55Roman";
+  src: url("fonts/Frutiger55Roman/font.woff2") format("woff2"),
+    url("fonts/Frutiger55Roman/font.woff") format("woff");
+}
