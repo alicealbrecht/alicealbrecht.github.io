@@ -316,7 +316,7 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-    max-width: 800px; /* Ensure a reasonable width for readability */
+    max-width: 1000px; /* Ensure a reasonable width for readability */
     width: 100%;
     padding: 0 20px; /* Add padding to prevent content from hitting the edges */
   }
@@ -332,6 +332,7 @@
   .title-wrapper h2 {
     font-size: 2em;
     margin-bottom: 10px;
+    line-height: 1.8;
   }
   
   .meta {
@@ -356,7 +357,6 @@
   .read-more:hover {
     text-decoration: underline;
   }
-
 /* Horizontally constrained layout */
 @media only screen and (max-width: 900px) {
     .header-wrapper {
