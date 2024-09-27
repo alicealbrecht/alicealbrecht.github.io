@@ -194,14 +194,17 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-    max-width: 800px;
+    max-width: 800px; /* Ensure a reasonable width for readability */
     width: 100%;
-    padding: 0 20px;
+    padding: 0 20px; /* Add padding to prevent content from hitting the edges */
   }
   
   .section-wrapper {
-    padding: 20px;
+    padding: 40px; /* Increase padding for a more spaced-out look */
     border-bottom: 1px solid #ccc;
+    background-color: #f9f9f9; /* Optional: Light background for better contrast */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow for depth */
+    border-radius: 10px; /* Optional: Rounded corners for a softer look */
   }
   
   .title-wrapper h2 {
@@ -219,6 +222,8 @@
     font-size: 1.2em;
     line-height: 1.6;
     margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px; /* Extra padding inside paragraphs */
   }
   
   .read-more {
@@ -229,6 +234,7 @@
   .read-more:hover {
     text-decoration: underline;
   }
+  
   
 
 /* News */

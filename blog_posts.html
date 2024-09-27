@@ -250,6 +250,36 @@
       </div>
     </div>
     
+    <div class="news-wrapper" id="news">
+      <div class="news" x-data="posts">
+        <template x-for="post in posts">
+          <div class="section-wrapper">
+            <section>
+              <div class="title-wrapper">
+                <h2 x-text="post.title"></h2>
+                <div class="date" x-text="post.date"></div>
+                <div class="tag" x-text="post.tag"></div>
+              </div>
+              <div class="description-wrapper">
+                <p x-html="post.description"></p>
+                <p>
+                  <a
+                    :href="post.href"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="read-more"
+                    >Read more<img
+                      src="arrow_top_right.svg?v=1.0"
+                      class="expand-indicator"
+                  /></a>
+                </p>
+              </div>
+            </section>
+          </div>
+        </template>
+      </div>
+    </div>
+
     <div class="blog_post-wrapper" id="blog_post">
       <div class="blog_posts" x-data="posts">
         <template x-for="post in posts">
