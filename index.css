@@ -312,7 +312,7 @@
     padding-top: 20px;
   }
   
-  .blog_posts {
+  .blog_post-wrapper .blog_posts {
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -321,7 +321,7 @@
     padding: 0 20px; /* Add padding to prevent content from hitting the edges */
   }
   
-  .section-wrapper {
+  .blog_post-wrapper .blog_posts .section-wrapper {
     padding: 40px; /* Increase padding for a more spaced-out look */
     border-bottom: 1px solid #ccc;
     background-color: #f9f9f9; /* Optional: Light background for better contrast */
@@ -329,7 +329,7 @@
     border-radius: 10px; /* Optional: Rounded corners for a softer look */
   }
   
-  .title-wrapper h2 {
+  .blog_post-wrapper .blog_posts .title-wrapper h2 {
     font-size: 2em;
     margin-bottom: 10px;
     line-height: 1.8;
@@ -341,7 +341,7 @@
     margin-bottom: 20px;
   }
   
-  .description-wrapper p {
+  .blog_post-wrapper .blog_posts .description-wrapper p {
     font-size: 1.2em;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -349,12 +349,12 @@
     padding-right: 10px; /* Extra padding inside paragraphs */
   }
   
-  .read-more {
+  .blog_post-wrapper .blog_posts .read-more {
     font-weight: bold;
     font-size: 0.9em;
   }
   
-  .read-more:hover {
+  .blog_post-wrapper .blog_posts .read-more:hover {
     text-decoration: underline;
   }
 /* Horizontally constrained layout */
