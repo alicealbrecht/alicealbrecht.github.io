@@ -450,6 +450,7 @@
         /></a>
 -->
         <ul class="menu">
+<!--
           <li
             x-data="{ scroll: false }"
             @scroll.window="scroll = (window.pageYOffset > document.documentElement.clientHeight) ? true : false"
@@ -460,6 +461,10 @@
               x-on:click.prevent="document.getElementById('news').scrollIntoView({behavior: 'smooth'})"
               >News</a
             >
+          </li>
+-->
+          <li>
+            <a href="index.html">News</a>
           </li>
           <li>
             <a href="blog_posts.html">Posts</a>
@@ -536,6 +541,7 @@
         </div>
         <div class="footer">
           <ul>
+<!--
             <li class="mobile-news-link">
               <a
                 href="#news"
@@ -543,6 +549,7 @@
                 >News</a
               >
             </li>
+--> 
 <!--        <li>
               <a href="https://app.re-collect.ai">Log in</a>
             </li>
