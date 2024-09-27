@@ -10,6 +10,13 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://alicealbrecht.com" />
 
+    <meta property="og:image" content="https://alicealbrecht.com/og.png" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://alicealbrecht.com" />
+    <meta property="twitter:title" content="Alice Albrecht" />
+
+    <meta property="twitter:image" content="https://alicealbrecht.com/og.png" />
+
     <!-- Alpine JS -->
     <script>
       var posts = [
@@ -423,17 +430,28 @@
     >
       <div class="header">
         <ul class="menu">
+<!--
           <li
+
             x-data="{ scroll: false }"
             @scroll.window="scroll = (window.pageYOffset > document.documentElement.clientHeight) ? true : false"
             :class="{ 'news-in-view': scroll }"
           >
+
             <a
               href="#news"
               x-on:click.prevent="document.getElementById('news').scrollIntoView({behavior: 'smooth'})"
               >News</a
             >
+
           </li>
+        -->
+        <li>
+          <a href="news.html">News</a>
+        </li>
+        <li>
+          <a href="blog_posts.html">Posts</a>
+<!--
           <li>
             <a
               href="#posts"
@@ -441,6 +459,7 @@
               >Posts</a
             >
           </li>
+-->
         </ul>
       </div>
     </div>
