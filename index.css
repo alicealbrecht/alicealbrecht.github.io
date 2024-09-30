@@ -467,8 +467,8 @@
         border-radius: 5px; /* Slightly smaller rounded corners for smaller screens */
     }
     .title-wrapper h2 {
-        font-size: 16 px; /*1.5em;  Slightly smaller title size for mobile */
-        line-height: 22 px; /*1.2;  Adjust line-height for readability on smaller screens */
+        font-size: 1.5em; /* 16 px;  Slightly smaller title size for mobile */
+        line-height: 1.2; /* 22 px;  Adjust line-height for readability on smaller screens */
     }
 
     .meta {
