@@ -21,7 +21,7 @@
 .modal .content-wrapper {
     display: flex;
     flex-flow: row nowrap;
-    gap: 80px;
+    gap: 20px;
     justify-content: center;
     align-items: center;
 }
