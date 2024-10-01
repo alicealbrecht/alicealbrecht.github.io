@@ -334,7 +334,7 @@
   }
   
   .blog_post-wrapper .blog_posts .title-wrapper h2 {
-    font-size: 2em;
+    font-size: 16px; /*2em; */
     margin-bottom: 10px;
     line-height: 1.2;
   }
@@ -503,7 +503,7 @@
         border-radius: 5px; /* Slightly smaller rounded corners for smaller screens */
     }
     .title-wrapper h2 {
-        font-size: 1.5em; /* 16 px;  Slightly smaller title size for mobile */
+        font-size:  16px; /*1.5em;;  Slightly smaller title size for mobile */
         line-height: 1.2; /* 22 px;  Adjust line-height for readability on smaller screens */
     }
 
