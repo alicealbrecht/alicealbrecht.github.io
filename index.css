@@ -358,6 +358,7 @@
     text-decoration: underline;
   }
 /* Horizontally constrained layout */
+/*
 @media only screen and (max-width: 900px) {
     .header-wrapper {
         padding: 0 40px;
@@ -366,6 +367,37 @@
     .header-wrapper .menu {
         display: none;
     }
+*/
+@media only screen and (max-width: 900px) {
+    .header-wrapper {
+        padding: 0 20px;
+    }
+
+    /* Make sure the menu is visible */
+    .header-wrapper .menu {
+        display: flex; /* Make the menu visible on mobile */
+        justify-content: space-around; /* Space out the menu items evenly */
+        width: 100%;
+        padding: 10px 0;
+        background-color: #f8f0eb; /* Background color to match your theme */
+        position: fixed; /* Keep the menu fixed at the top */
+        top: 0;
+        left: 0;
+        z-index: 1000; /* Ensure it stays above the rest of the content */
+    }
+
+    .header-wrapper .menu li {
+        padding: 10px;
+        display: inline-block;
+        font-size: 1em; /* Adjust font size for mobile */
+    }
+
+    /* Ensure body content doesn’t hide behind the menu */
+    body {
+        padding-top: 60px; /* Add padding to account for the fixed header */
+    }
+}
+
 
     .modal {
         padding: 0 20px;
