@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Alice Albrecht</title>
+    <title>Alice Albrecht - News</title>
 
     <meta property="og:title" content="Alice Albrecht" />
     <meta property="og:type" content="website" />
@@ -14,66 +14,15 @@
     <meta property="twitter:title" content="Alice Albrecht" />
     <meta property="twitter:image" content="https://alicealbrecht.com/og.png" />
 
-    <!-- Alpine JS -->
-    <script>
-      var posts = [
-        {
-          title: "AI Interfaces and Malleable Software Demo Night",
-          tag: "Event",
-          href: "https://x.com/AliceAlbrecht/status/1816531790435352784",
-          date: "Jul 24, 2024",
-          description:
-            "Demoed re:collect adaptive workspaces at an event dedicated to the future of computing and how malleable software and AI are driving the space forward.",
-        },
-        {
-          title: "The Orthogonal Bet: What AI Can Learn from Human Cognition",
-          tag: "Podcast",
-          href: "https://pod.link/1615629580/episode/d2483220f69ed61939c3eba2b249a32b",
-          date: "Jul 12, 2024",
-          description:
-            "Sat down with Sam Arbesman from Lux Capital to talk about being an AI hipster and how we should broaden our science fiction horizons.",
-        },
-        // More post entries go here
-      ];
-
-      // Initialize Alpine.js
-      document.addEventListener("DOMContentLoaded", function () {
-        Alpine.data("posts", function () {
-          return {
-            posts: posts,
-          };
-        });
-      });
-    </script>
-    <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MBYDYHHLRL"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-MBYDYHHLRL");
-    </script>
-
     <link href="favicon.ico?v=1.0" rel="shortcut icon" type="image/x-icon" />
     <link href="icon.png?v=1.0" rel="apple-touch-icon" />
     <link rel="stylesheet" href="base.css?v=1.0" />
     <link rel="stylesheet" href="index.css?v=1.0" />
     <link rel="stylesheet" href="frutiger.css?v=1.0" />
-    <script src="//embed.typeform.com/next/embed.js"></script>
-    <link rel="stylesheet" href="//embed.typeform.com/next/css/popup.css" />
   </head>
 
   <body>
-    <div
-      class="header-wrapper"
-      x-data="{ scroll: false }"
-      @scroll.window="scroll = (window.pageYOffset > 50) ? true : false"
-      :class="{ 'did-scroll': scroll }"
-    >
+    <div class="header-wrapper" x-data="{ scroll: false }" @scroll.window="scroll = (window.pageYOffset > 50) ? true : false" :class="{ 'did-scroll': scroll }">
       <div class="header">
         <ul class="menu">
           <li><a href="index.html">Home</a></li>
@@ -95,15 +44,7 @@
               </div>
               <div class="description-wrapper">
                 <p x-html="post.description"></p>
-                <p>
-                  <a
-                    :href="post.href"
-                    target="_blank"
-                    rel="noreferrer"
-                    class="read-more"
-                    >Read more<img src="arrow_top_right.svg?v=1.0" class="expand-indicator" /></a
-                  >
-                </p>
+                <p><a :href="post.href" target="_blank" rel="noreferrer" class="read-more">Read more <img src="arrow_top_right.svg?v=1.0" class="expand-indicator" /></a></p>
               </div>
             </section>
           </div>
@@ -111,17 +52,13 @@
       </div>
     </div>
 
-    <div class="modal-wrapper">
-      <div class="modal">
-        <div class="footer">
-          <ul>
-            <li><a href="https://x.com/AliceAlbrecht" target="_blank" rel="noreferrer">Twitter</a></li>
-            <li><a href="https://www.linkedin.com/in/alice-albrecht-6379868/" target="_blank" rel="noreferrer">LinkedIn</a></li>
-          </ul>
-        </div>
-      </div>
+    <div class="footer">
+      <ul>
+        <li><a href="https://x.com/AliceAlbrecht" target="_blank" rel="noreferrer">Twitter</a></li>
+        <li><a href="https://www.linkedin.com/in/alice-albrecht-6379868/" target="_blank" rel="noreferrer">LinkedIn</a></li>
+      </ul>
     </div>
-    
+
     <script src="scripts.js"></script>
   </body>
 </html>

@@ -14,34 +14,15 @@
     <meta property="twitter:title" content="Alice Albrecht" />
     <meta property="twitter:image" content="https://alicealbrecht.com/og.png" />
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MBYDYHHLRL"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-MBYDYHHLRL");
-    </script>
-    <!-- End Google Analytics -->
-
     <link href="favicon.ico?v=1.0" rel="shortcut icon" type="image/x-icon" />
     <link href="icon.png?v=1.0" rel="apple-touch-icon" />
     <link rel="stylesheet" href="base.css?v=1.0" />
     <link rel="stylesheet" href="index.css?v=1.0" />
     <link rel="stylesheet" href="frutiger.css?v=1.0" />
-    <script src="//embed.typeform.com/next/embed.js"></script>
-    <link rel="stylesheet" href="//embed.typeform.com/next/css/popup.css" />
   </head>
 
   <body>
-    <div
-      class="header-wrapper"
-      x-data="{ scroll: false }"
-      @scroll.window="scroll = (window.pageYOffset > 50) ? true : false"
-      :class="{ 'did-scroll': scroll }"
-    >
+    <div class="header-wrapper" x-data="{ scroll: false }" @scroll.window="scroll = (window.pageYOffset > 50) ? true : false" :class="{ 'did-scroll': scroll }">
       <div class="header">
         <ul class="menu">
           <li><a href="index.html">Home</a></li>
@@ -51,64 +32,22 @@
       </div>
     </div>
 
-    <div class="modal-wrapper">
-      <div class="modal">
-        <div class="content-wrapper">
-          <div class="content">
-            <section>
-              <h1>Hi! I'm Alice.</h1>
-              <p>
-                I care a lot about how we can use machines to augment human thought.
-                I think that information is powerful, and with the right information,
-                we can make better decisions and be more creative.
-              </p>
-              <p>
-                I've worn many hats over the years as a researcher, academic, and entrepreneur.
-                Currently, I'm at SmartNews with a bunch of other smart people, working on how AI can
-                help people access quality news while honoring their attention and the journalists who create it.
-              </p>
-            </section>
-          </div>
-        </div>
-
-        <div class="footer">
-          <ul>
-            <li>
-              <a href="https://x.com/AliceAlbrecht" target="_blank" rel="noreferrer">Twitter</a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/alice-albrecht-6379868/" target="_blank" rel="noreferrer">LinkedIn</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-<!--
-    <div class="news-wrapper" id="news">
-      <div class="news" x-data="posts">
-        <template x-for="post in posts">
-          <div class="section-wrapper">
-            <section>
-              <div class="title-wrapper">
-                <h2 x-text="post.title"></h2>
-                <div class="date" x-text="post.date"></div>
-                <div class="tag" x-text="post.tag"></div>
-              </div>
-              <div class="description-wrapper">
-                <p x-html="post.description"></p>
-                <p>
-                  <a :href="post.href" target="_blank" rel="noreferrer" class="read-more">
-                    Read more <img src="arrow_top_right.svg?v=1.0" class="expand-indicator" />
-                  </a>
-                </p>
-              </div>
-            </section>
-          </div>
-        </template>
+    <div class="content-wrapper">
+      <div class="content">
+        <section>
+          <h1>Hi! I'm Alice.</h1>
+          <p>I care a lot about how we can use machines to augment human thought. I think that information is powerful, and with the right information, we can make better decisions and be more creative.</p>
+          <p>I've worn many hats over the years as a researcher, academic, and entrepreneur. Currently, I'm at SmartNews with a bunch of other smart people, working on how AI can help people access quality news while honoring their attention and the journalists who create it.</p>
+        </section>
       </div>
     </div>
 
--->
+    <div class="footer">
+      <ul>
+        <li><a href="https://x.com/AliceAlbrecht" target="_blank" rel="noreferrer">Twitter</a></li>
+        <li><a href="https://www.linkedin.com/in/alice-albrecht-6379868/" target="_blank" rel="noreferrer">LinkedIn</a></li>
+      </ul>
+    </div>
 
     <script src="scripts.js"></script>
   </body>
