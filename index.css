@@ -399,7 +399,7 @@
 
     /* Ensure body content doesn’t hide behind the menu */
     body {
-        padding-top: 60px; /* Add padding to account for the fixed header */
+        padding-top: 30px; /*60px Add padding to account for the fixed header */
     }
 }
 
