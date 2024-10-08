@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: calc(100vh -px);
+    min-height: 100vh;
     margin-top: 0;
     padding-top: 0;
 }
@@ -40,9 +40,7 @@
     height: 101px;
     background-color: transparent;
     border-bottom: 1px solid transparent;
-    transition-property: background-color, border-color;
-    transition-duration: 250ms;
-    transition-timing-function: ease-out;
+    transition: background-color 250ms ease-out, border-color 250ms ease-out;
     padding: 0 60px;
 }
 
@@ -60,21 +58,12 @@
     max-width: calc(1440px - 120px);
 }
 
-.header .logo {
-    display: block;
-    width: 140px;
-    z-index: 1;
-}
-
 .header .menu {
     position: absolute;
     top: 0;
     left: 0;
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
     gap: 12px;
@@ -82,6 +71,8 @@
     width: 100%;
     height: 100px;
     pointer-events: none;
+    padding: 0;
+    margin: 0;
 }
 
 .header ul.menu li {
@@ -95,95 +86,6 @@
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.header ul.menu li.news-in-view {
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-.modal .content {
-    flex: 1 1 50%;
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 40px;
-}
-
-.modal .content section {
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 12px;
-}
-
-.modal .form-message {
-    font-weight: 500;
-    color: #4240b9;
-}
-
-.modal .form-row {
-    display: flex;
-    flex-flow: row nowrap;
-    margin-bottom: 8px;
-}
-
-.modal .form-row input:focus {
-    outline-color: #4240b9;
-}
-
-.modal .form-row input[type="submit"] {
-    display: inline-block;
-    padding: 12px 20px;
-    margin-top: 8px;
-    background-color: #000;
-    border-radius: 8px;
-    border: none;
-    color: white;
-    cursor: pointer;
-    font-family: "Frutiger55Roman", serif;
-    font-size: 16px;
-    font-weight: normal;
-    text-align: center;
-    text-decoration: none;
-}
-
-.modal .form-row input[type="submit"]:disabled {
-    cursor: default;
-    opacity: 0.5;
-}
-
-.modal .form-row input[type="submit"]:hover {
-    background-color: #333;
-}
-
-.modal .content-image {
-    flex: 1 1 50%;
-    overflow: hidden;
-    border-radius: 20px;
-}
-
-/*
-.modal .content-image .hero {
-    position: relative;
-    display: block;
-    max-width: 100%;
-    height: auto;
-    text-align: center;
-    box-sizing: border-box;
-    padding: 0;
-    aspect-ratio: 1;
-    background-image: url("mac.png?v=1.0");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-color: transparent;
-}
-
-.modal .content-image .hero video {
-    position: absolute;
-    top: 21%;
-    left: 8%;
-    width: 84.5%;
-    overflow: hidden;
-    border-radius: 4px;
-}
-*/
-
 /* Footer */
 .footer {
     width: 100%;
@@ -194,30 +96,22 @@
     padding: 32px 0;
 }
 
-.footer a:hover {
-    color: #000;
-}
-
 .footer ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     flex-flow: row nowrap;
     gap: 20px;
+    padding: 0;
+    margin: 0;
 }
 
-.modal .footer ul li.mobile-news-link {
-    display: none;
-}
-
-/* News */
+/* News Section */
 .news-wrapper {
     display: flex;
     justify-content: center;
     width: 100%;
     min-height: 100vh;
-    padding-top: 0; /* Remove the top padding */
+    padding-top: 0;
 }
 
 .news-wrapper .news {
@@ -228,23 +122,9 @@
 }
 
 .news-wrapper .news .section-wrapper {
-    padding-top: 40px;
-
-    padding-bottom: 40px;
-
+    padding: 40px 0;
     display: flex;
     justify-content: center;
-}
-
-.news-wrapper .news .section-wrapper:first-child {
-    border-top: 1px solid #444;
-}
-
-.news-wrapper .news .section-wrapper:last-child {
-    border-bottom: 1px solid #444;
-}
-
-.news-wrapper .news .section-wrapper + .section-wrapper {
     border-top: 1px solid #444;
 }
 
@@ -257,152 +137,58 @@
     padding: 0 40px;
 }
 
-.news section .title-wrapper {
-    flex: 1 1 50%;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-start;
-    gap: 10px;
-    min-width: 400px;
-    padding: 0 20px;
-}
-
-.news section .read-more {
-    display: inline-block;
-    margin-top: 20px;
-    font-size: 0.9em;
-}
-
-.news section .read-more:hover {
-    text-decoration: underline;
-}
-
-.news section .read-more > * {
-    vertical-align: middle;
-}
-
-.news section .expand-indicator {
-    display: inline-block;
-    margin-left: 4px;
-}
-
-.news section .date {
-    font-size: 14px;
-    line-height: 14px;
-    color: rgba(0, 0, 0, 0.8);
-    margin-bottom: 12px;
-}
-
-.news section .tag {
-    padding: 8px 12px;
-    border-radius: 8px;
-    background: rgba(0, 0, 0, 0.05);
-    font-size: 14px;
-    line-height: 14px;
-}
-
-.news section .description-wrapper {
-    flex: 1 1 50%;
-    min-width: 50%;
-    padding: 0 20px;
-}
-
-/* Blog Posts */
-
+/* Blog Post Section */
 .blog_post-wrapper {
     display: flex;
     justify-content: center;
     width: 100%;
     padding-top: 20px;
-  }
-  
-  .blog_post-wrapper .blog_posts {
+}
+
+.blog_post-wrapper .blog_posts {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    max-width: 1000px; /* Ensure a reasonable width for readability */
+    max-width: 1000px;
     width: 100%;
-    padding: 0 20px; /* Add padding to prevent content from hitting the edges */
-  }
-  
-  .blog_post-wrapper .blog_posts .section-wrapper {
-    padding: 40px; /* Increase padding for a more spaced-out look */
-    border-bottom: 1px solid #ccc;
-    background-color: #f9f9f9; /* Optional: Light background for better contrast */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow for depth */
-    border-radius: 10px; /* Optional: Rounded corners for a softer look */
-  }
-/* 
-  .blog_post-wrapper .blog_posts .title-wrapper h2 {
-    font-size: 16px; /*2em; */  /*
-    margin-bottom: 10px;
-    line-height: 1.2;
-  }
-*/
-  
-  .meta {
-    font-size: 0.9em;
-    color: #888;
-    margin-bottom: 20px;
-  }
-  
-  .blog_post-wrapper .blog_posts .description-wrapper p {
-    font-size: 1.2em;
-    line-height: 1.3;
-    margin-bottom: 20px;
-    padding-left: 10px;
-    padding-right: 10px; /* Extra padding inside paragraphs */
-  }
-  
-  .blog_post-wrapper .blog_posts .read-more {
-    font-weight: bold;
-    font-size: 0.9em;
-  }
-  
-  .blog_post-wrapper .blog_posts .read-more:hover {
-    text-decoration: underline;
-  }
-/* Horizontally constrained layout */
-/*
-@media only screen and (max-width: 900px) {
-    .header-wrapper {
-        padding: 0 40px;
-    }
+    padding: 0 20px;
+}
 
-    .header-wrapper .menu {
-        display: none;
-    }
-*/
+.blog_post-wrapper .blog_posts .section-wrapper {
+    padding: 40px;
+    border-bottom: 1px solid #ccc;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Responsive Styles */
 @media only screen and (max-width: 900px) {
     .header-wrapper {
         padding: 0 20px;
     }
 
-    /* Make sure the menu is visible */
     .header-wrapper .menu {
-        display: flex; /* Make the menu visible on mobile */
-        justify-content: space-around; /* Space out the menu items evenly */
+        display: flex;
+        justify-content: space-around;
         width: 100%;
         padding: 10px 0;
-        background-color: #f8f0eb; /* Background color to match your theme */
-        position: fixed; /* Keep the menu fixed at the top */
+        background-color: #f8f0eb;
+        position: fixed;
         top: 0;
         left: 0;
-        z-index: 1000; /* Ensure it stays above the rest of the content */
+        z-index: 1000;
     }
 
     .header-wrapper .menu li {
         padding: 10px;
         display: inline-block;
-        font-size: 1em; /* Adjust font size for mobile */
+        font-size: 1em;
     }
 
-    /* Ensure body content doesn’t hide behind the menu */
     body {
-        padding-top: 30px; /*60px Add padding to account for the fixed header */
+        padding-top: 60px;
     }
-}
-
 
     .modal {
         padding: 0 20px;
@@ -415,106 +201,32 @@
         gap: 0;
     }
 
-    .modal .content {
-        flex: 1 1 100%;
-        padding: 20px;
-        gap: 20px;
-    }
-
-    .news section {
-        gap: 20px;
-    }
-
-    .news section .title-wrapper {
-        min-width: unset;
-        max-width: unset;
-        width: 100%;
-    }
-
-    .modal .content-image {
-        flex: 1 1 100%;
-        margin: 0 20px;
-        width: calc(100% - 40px);
-    }
-
-    .modal .footer {
-        padding: 20px;
-    }
-
-    .modal .footer ul {
-        flex-direction: column;
-    }
-
-    .modal .footer ul li.mobile-news-link {
-        display: block;
-    }
-
-    .modal p {
-        font-size: 16px;
-        line-height: 24px;
-    }
-
-    .modal h1 {
-        font-size: 24px;
-        line-height: 34px;
-    }
-
-    .modal .form-row {
-        flex-direction: column;
-    }
-
-    .modal .form-row input + input {
-        margin: 8px 0 0 0;
-    }
-
     .news-wrapper .news section {
         flex-flow: column nowrap;
+        gap: 20px;
     }
 
-    .news-wrapper .news .section-wrapper {
-        padding: 20px;
-    }
-
-    .news-wrapper .news section {
-        padding: 0;
-    }
-
-    .news-wrapper h2 {
-        font-size: 16px;
-        line-height: 22px;
-    }
-
-    .news-wrapper p {
-        font-size: 16px;
-        line-height: 24px;
-    }
-
-    /* Blog posts responsiveness */
-       .blog_post-wrapper {
-        padding-top: 10px; /* Adjust the padding for smaller screens */
+    .blog_post-wrapper {
+        padding-top: 10px;
     }
 
     .blog_posts {
-        max-width: 100%; /* Make the blog posts take up the full width on mobile */
-        padding: 0 15px; /* Reduce padding for smaller screens */
+        max-width: 100%;
+        padding: 0 15px;
     }
 
     .section-wrapper {
-        padding: 20px; /* Reduce padding inside individual posts */
-        border-radius: 5px; /* Slightly smaller rounded corners for smaller screens */
-    }
-    .title-wrapper h2 {
-        font-size: clamp(1.5em, 2vw + 1em, 2.5em); /* Responsive font size */  /* 16px; 1.5em;;  Slightly smaller title size for mobile */
-        line-height: 1.2;
-        margin-bottom: 10px; /*not sure we want this margin */
+        padding: 20px;
+        border-radius: 5px;
     }
 
-    .meta {
-        font-size: 0.85em; /* Make the metadata text slightly smaller */
+    .title-wrapper h2 {
+        font-size: clamp(1.5em, 2vw + 1em, 2.5em);
+        line-height: 1.2;
     }
 
     .description-wrapper p {
-        font-size: 1.1em; /* Slightly smaller paragraph text for mobile */
-        line-height: 1.5; /* Adjust line-height for better readability on mobile */
+        font-size: 1.1em;
+        line-height: 1.5;
     }
 }
