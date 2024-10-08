@@ -1,3 +1,4 @@
+
 /* Modal Wrapper */
 .modal-wrapper {
     display: flex;
@@ -362,7 +363,6 @@
   .blog_post-wrapper .blog_posts .read-more:hover {
     text-decoration: underline;
   }
-  
 /* Horizontally constrained layout */
 /*
 @media only screen and (max-width: 900px) {
@@ -404,81 +404,102 @@
     }
 }
 
+
     .modal {
         padding: 0 20px;
         gap: 40px;
     }
+
     .modal .content-wrapper {
         flex-direction: column;
         align-items: flex-start;
         gap: 0;
     }
+
     .modal .content {
         flex: 1 1 100%;
         padding: 20px;
         gap: 20px;
     }
+
     .news section {
         gap: 20px;
     }
+
     .news section .title-wrapper {
         min-width: unset;
         max-width: unset;
         width: 100%;
     }
+
     .modal .content-image {
         flex: 1 1 100%;
         margin: 0 20px;
         width: calc(100% - 40px);
     }
+
     .modal .footer {
         padding: 20px;
     }
+
     .modal .footer ul {
         flex-direction: column;
     }
+
     .modal .footer ul li.mobile-news-link {
         display: block;
     }
+
     .modal p {
         font-size: 16px;
         line-height: 24px;
     }
+
     .modal h1 {
         font-size: 24px;
         line-height: 34px;
     }
+
     .modal .form-row {
         flex-direction: column;
     }
+
     .modal .form-row input + input {
         margin: 8px 0 0 0;
     }
+
     .news-wrapper .news section {
         flex-flow: column nowrap;
     }
+
     .news-wrapper .news .section-wrapper {
         padding: 20px;
     }
+
     .news-wrapper .news section {
         padding: 0;
     }
+
     .news-wrapper h2 {
         font-size: 16px;
         line-height: 22px;
     }
+
     .news-wrapper p {
         font-size: 16px;
         line-height: 24px;
     }
+
     /* Blog posts responsiveness */
-    .blog_post-wrapper {
+       .blog_post-wrapper {
         padding-top: 10px; /* Adjust the padding for smaller screens */
     }
+
     .blog_posts {
         max-width: 100%; /* Make the blog posts take up the full width on mobile */
         padding: 0 15px; /* Reduce padding for smaller screens */
     }
+
     .section-wrapper {
         padding: 20px; /* Reduce padding inside individual posts */
         border-radius: 5px; /* Slightly smaller rounded corners for smaller screens */
@@ -488,11 +509,13 @@
         line-height: 1.2;
         margin-bottom: 10px; /*not sure we want this margin */
     }
+
     .meta {
         font-size: 0.85em; /* Make the metadata text slightly smaller */
     }
+
     .description-wrapper p {
         font-size: 1.1em; /* Slightly smaller paragraph text for mobile */
         line-height: 1.5; /* Adjust line-height for better readability on mobile */
     }
-
+}
