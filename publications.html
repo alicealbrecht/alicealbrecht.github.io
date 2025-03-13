@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Alice Albrecht - Publications</title>
+    <meta property="og:title" content="Alice Albrecht - Publications" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alicealbrecht.com/publications" />
+    <meta property="og:image" content="https://alicealbrecht.com/og.png" />
+
+    <!-- Alpine JS -->
+    <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
+    <script>
+      document.addEventListener('alpine:init', () => {
+        Alpine.store('posts', {
+          posts: [
+            {
+              title: "a16z AI x productivity tools market map",
+              tag: "Article",
+              href: "https://twitter.com/omooretweets/status/1760000618557735289",
+              date: "February 20, 2024",
+              description: "re:collect featured on a16z AI x productivity tools market map."
+            },
+            {
+              title: "G&W Portfolio Founder Feature: Alice Albrecht, Founder & CEO, re:collect",
+              tag: "Article",
+              href: "https://grahamwalker.com/blog/gw-portfolio-founder-feature-alice-albrecht-founder-ceo-recollect/",
+              date: "January 11, 2024",
+              description: "Founder feature by Graham and Walker."
+            },
+            {
+              title: "The Case for Cyborgs: Augmenting human intelligence beyond AI will take us much further than creating something new",
+              tag: "Article",
+              href: "https://every.to/p/the-case-for-cyborgs",
+              date: "January 8, 2024",
+              description: "Alice Albrecht made a case for cyborgs instead of AGI in this Every article."
+            },
+            {
+              title: "Alice Albrecht: Improving Humanity's Creative Thinking and Decision-Making",
+              tag: "Article",
+              href: "https://www.nasdaq.com/articles/alice-albrecht:-improving-humanitys-creative-thinking-and-decision-making",
+              date: "August 18, 2023",
+              description: "NASDAQ Ladderworks Blog featured re:collect. In the interview you'll learn what's happening at re:collect AI and how Alice is making a positive impact in the world."
+            },
+            {
+              title: "How to Improve Your Creative Thinking: The science of creativity  - and how to unlock it (by Alice Albrecht)",
+              tag: "Article",
+              href: "https://every.to/superorganizers/understanding-the-science-of-creativity",
+              date: "December 9, 2022",
+              description: "Alice Albrecht wrote an article for Every detailing how human creativity works and what steps you can take to unlock it."
+            }
+          ]
+        });
+      });
+    </script>
+
+    <link rel="stylesheet" href="base.css?v=1.1" />
+    <link rel="stylesheet" href="index.css?v=1.1" />
+    <link rel="stylesheet" type="text/css" href="frutiger.css?v=1.1" />
+  </head>
+
+  <body>
+    <div class="header-wrapper">
+      <div class="header">
+        <ul class="menu">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="publications.html">Publications</a>
+          </li>
+          <li>
+            <a href="appearances.html">Appearances</a>
+          </li>
+          <li>
+            <a href="announcements.html">Announcements</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="news-wrapper">
+      <div class="news" x-data="{ posts: $store.posts.posts.filter(post => ['Article'].includes(post.tag)) }">
+        <template x-for="post in posts">
+          <div class="section-wrapper" :class="{ 'first': $index === 0 }">
+            <section>
+              <div class="title-wrapper">
+                <h1 x-text="post.title"></h1>
+                <div class="date" x-text="post.date"></div>
+                <div class="tag" x-text="post.tag" style="display: none;"></div>
+              </div>
+              <div class="description-wrapper">
+                <p x-html="post.description"></p>
+                <p>
+                  <a
+                    :href="post.href"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="read-more"
+                    >Read more<img
+                      src="arrow_top_right.svg?v=1.0"
+                      class="expand-indicator"
+                  /></a>
+                </p>
+              </div>
+            </section>
+          </div>
+        </template>
+      </div>
+    </div>
+  </body>
+</html>

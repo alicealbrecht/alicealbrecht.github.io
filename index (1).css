@@ -1,0 +1,410 @@
+/* Modal Wrapper */
+.modal-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    width: 100%;
+}
+
+/* Modal */
+.modal {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 40px;
+}
+
+.modal .content-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 80px;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1440px;
+    padding: 0 20px;
+    margin-top: 40px;
+}
+
+/* Header */
+.header-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    height: 80px;
+    background-color: #f8f0eb;
+    padding: 0 60px;
+    border-bottom: none;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.header .logo {
+    display: block;
+    width: 140px;
+    z-index: 1;
+}
+
+.header .menu {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 32px;
+}
+
+.header .menu li {
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.header .menu li a {
+    color: #000;
+    text-decoration: none;
+    font-family: "Frutiger55Roman", serif;
+    font-size: 16px;
+    white-space: nowrap;
+    display: block;
+}
+
+.header .menu li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Add padding to body to account for fixed header */
+body {
+    padding-top: 80px;
+}
+
+.modal .content {
+    font-family: "Frutiger45Light", sans-serif;
+    flex: 1 1 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 40px;
+}
+
+.modal .content h1 {
+    font-size: 32px;
+    line-height: 44px;
+}
+
+.modal .content section {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 12px;
+}
+
+.modal .content p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.modal .form-message {
+    font-weight: 500;
+    color: #4240b9;
+}
+
+.modal .form-row {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 8px;
+}
+
+.modal .form-row input:focus {
+    outline-color: #4240b9;
+}
+
+.modal .form-row input[type="submit"] {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-top: 8px;
+    background-color: #000;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-family: "Frutiger55Roman", serif;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    text-decoration: none;
+}
+
+.modal .form-row input[type="submit"]:disabled {
+    cursor: default;
+    opacity: 0.5;
+}
+
+.modal .form-row input[type="submit"]:hover {
+    background-color: #333;
+}
+
+.modal .content-image {
+    flex: 1 1 50%;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+/*
+.modal .content-image .hero {
+    position: relative;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0;
+    aspect-ratio: 1;
+    background-image: url("mac.png?v=1.0");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: transparent;
+}
+
+.modal .content-image .hero video {
+    position: absolute;
+    top: 21%;
+    left: 8%;
+    width: 84.5%;
+    overflow: hidden;
+    border-radius: 4px;
+}
+*/
+
+/* Footer */
+.footer {
+    font-family: "Frutiger55Roman", serif;
+    width: 100%;
+    font-size: 16px;
+    line-height: 20px;
+    color: #666;
+    padding: 32px 40px;
+    max-width: 1440px;
+    margin: 30px auto 0;
+}
+
+.footer a:hover {
+    color: #000;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0 20px;
+    margin: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px;
+}
+
+.modal .footer ul li.mobile-news-link {
+    display: none;
+}
+
+/* News */
+.news-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 40px; /* Add padding at the top for spacing */
+}
+
+.news-wrapper .news {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 8px;
+    width: 100%;
+}
+
+.news-wrapper .news .section-wrapper {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.news-wrapper .news .section-wrapper + .section-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 60px;
+    right: 100px;
+    height: 1px;
+    background-image: radial-gradient(circle, #666 0.5px, transparent 0.5px);
+    background-size: 8px 1px;
+    background-position: center;
+    background-repeat: repeat-x;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.news-wrapper .news .section-wrapper + .section-wrapper {
+    border-top: none;
+}
+
+.news-wrapper .news section {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 40px;
+}
+
+.news section .title-wrapper {
+    flex: 1 1 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    gap: 10px;
+    min-width: 400px;
+    padding: 0 20px;
+    margin-left: 0;
+}
+
+.news section .read-more {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.news section .read-more:hover {
+    text-decoration: underline;
+}
+
+.news section .read-more > * {
+    vertical-align: middle;
+}
+
+.news section .expand-indicator {
+    display: inline-block;
+    margin-left: 4px;
+}
+
+.news section .date {
+    font-size: 14px;
+    line-height: 14px;
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 12px;
+}
+
+.news section .tag {
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.05);
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.news section .description-wrapper {
+    flex: 1 1 50%;
+    min-width: 50%;
+    padding: 0 20px;
+}
+
+/* Horizontally constrained layout */
+@media only screen and (max-width: 900px) {
+    body {
+        font-size: 16px;
+        line-height: 24px;
+        padding: 10px;
+    }
+    .header-wrapper {
+        padding: 10px 20px;
+        height: auto;
+    }
+    .header .menu {
+        display: flex !important;
+        justify-content: center;
+        gap: 20px;
+        padding: 10px 0;
+    }
+    .header .menu li a {
+        font-size: 14px;
+    }
+    .modal p {
+        font-size: 11px;
+        line-height: 19px;
+    }
+    .modal .content-wrapper {
+        flex-direction: column;
+        gap: 40px;
+        padding: 0 15px;
+    }
+    .news-wrapper .news section {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    .news section .title-wrapper {
+        min-width: unset;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    .news section .description-wrapper {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header-wrapper {
+        padding: 0 15px;
+    }
+    .header .menu {
+        gap: 15px;
+    }
+    .header .menu li {
+        padding: 4px 8px;
+    }
+    .header .menu li a {
+        font-size: 14px;
+    }
+    .modal {
+        padding: 0 20px;
+    }
+    .modal .content-wrapper {
+        padding: 0;
+    }
+    .footer {
+        padding: 20px;
+    }
+    .footer ul {
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .header .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .modal .content h1 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .modal .content p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .news section .title-wrapper h1 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}

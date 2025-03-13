@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Alice Albrecht - Announcements</title>
+    <meta property="og:title" content="Alice Albrecht - Announcements" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alicealbrecht.com/announcements" />
+    <meta property="og:image" content="https://alicealbrecht.com/og.png" />
+
+    <!-- Alpine JS -->
+    <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
+    <script>
+      document.addEventListener('alpine:init', () => {
+        Alpine.store('posts', {
+          posts: [
+            {
+              title: "From re:collect founder to SmartNews:<br>Reflections on why what we consume shapes our thinking",
+              tag: "Announcements",
+              href: "https://about.smartnews.com/en/2024/09/26/from-recollect-founder-to-smartnews-reflections-on-why-what-we-consume-shapes-our-thinking/",
+              date: "September 26, 2024",
+              description: `<p>As I embarked on my entrepreneurial journey back in late 2019, I started dreaming up ways to bridge the gap between humans and machines so that we could meaningfully augment our intelligence. I'd spent years using machine learning (now called AI) to build software products and saw a big shift starting that would enable entirely new capabilities. I'd also grown increasingly uncomfortable with how the industry at large had used algorithms to influence human behavior, especially since I'd spent a past life as an academic studying human cognition. I knew there were better ways to build products that honored the way our minds work and that I was uniquely qualified to make that happen.</p>
+                <p>While we all collectively struggled through the early years of the pandemic, and I saw how information overload started to fray collective nerves as we all became very online, my conviction in what I wanted to build only grew. So, with the help of some Angel investors, I assembled a team and officially kicked off re:collect in the spring of 2021. We set out to connect the information people were consuming the way their minds would and help them use it in their everyday knowledge work in ways that felt natural to them.</p>
+                <p>Fast forward to 2024, and I'd spent 3 years building a venture-backed software company that I felt extremely proud of. We'd created what I believe was the right foundation to enable the next generation of human+machine interfaces (our "AI engine") and experimented with different product surfaces to see what resonated with our early customers. Though we'd made tremendous progress building, we weren't seeing the product truly click and catch fire the way you want a consumer product to. We'd been chasing that elusive product market fit and never quit catching it.</p>
+                <p>Earlier this year I took a look at how far we'd come and what I felt we'd need to get to the next phase. I realized that while I loved the "tools for thinking" space, it was a very uphill battle to build a sticky product when you didn't also own the platform people did their thinking on. I made the decision that I know is incredibly hard for most founders who make it, to step back from what we'd built and realize we had a lot of good pieces, but we needed to find a new home for our team and a different product to apply our ideas to. I felt that we could have a much bigger impact if we focused our efforts on a product that already had PMF and that was trying to solve similar, but not identical, problems.</p>
+                <p>Throughout this journey, I've learned a ton and so much in the world has changed, but I still believe that we can use AI and other technologies to capitalize on the vast amount of information we now have available to us to enhance human intelligence and help people make better decisions. It still feels like magic to me every day that I can use a hunk of metal filled with silicon and circuits to access almost any information that's out in the world and connect to people and places hundreds of miles away.</p>
+                <p>As I started to think about what was next, I had the very good fortune to meet Cory Ondrejka, the CTO of SmartNews, who had been thinking deeply about similar problems but for a different application. As we continued talking, it became clear to me that not only were they starting from a position of already having product-market fit in Japan, but they were also trying to accomplish some noble and audacious goals globally. They were focused on delivering quality news to people who needed it, and as veterans of Silicon Valley companies, they had the experience and opportunity to "get it right this time." What I'd so often heard VCs call an "unfair advantage." They also had an already awesome group of people working on the problem and were keen to experiment and use AI to push what's possible, but without exploiting their customers or the publishers they work with.</p>
+                <p>That brings us to today. I've wound down re:collect and I'm thrilled that my team is joining me at SmartNews for what I can already tell will be an epic next chapter. We will be able to leverage our expertise in connecting information and creating novel AI-driven interfaces right away. I'll be leading the AI efforts on the product team and will continue to think deeply about how we can make use of all the wild and wonderful information that's available out there in ways that support rather than exploit humans. Onward and upward!</p>`
+            }
+          ]
+        });
+      });
+    </script>
+
+    <link rel="stylesheet" href="base.css?v=1.1" />
+    <link rel="stylesheet" href="index.css?v=1.1" />
+    <link rel="stylesheet" type="text/css" href="frutiger.css?v=1.1" />
+    <style>
+      .news section {
+        display: flex;
+        flex-direction: column;
+      }
+      .news section .title-wrapper {
+        order: 1;
+        margin-bottom: 40px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #ddd;
+      }
+      .news section .title-wrapper h1 {
+        font-size: 25px;
+        margin-bottom: 15px;
+      }
+      .news section .title-wrapper .date {
+        color: #666;
+        font-size: 18px;
+      }
+      .news section .description-wrapper {
+        order: 2;
+      }
+      .news-wrapper {
+        padding-bottom: 100px;
+        padding-left: 60px;
+        padding-right: 60px;
+      }
+      .announcement-title-container {
+        width: 100%;
+        background: #f8f0eb;
+        padding: 40px 60px 12px;
+        margin-bottom: 13px;
+        border-bottom: 1px solid #eee;
+      }
+      .announcement-title-content {
+        max-width: 1440px;
+        margin: 0 auto;
+      }
+      .announcement-title-content h1 {
+        font-size: 25px;
+        margin-bottom: 15px;
+        line-height: 33px;
+        font-family: "Frutiger55Roman", serif;
+      }
+      .announcement-title-content h1 br {
+        display: block;
+        margin-bottom: 5px;
+      }
+      .announcement-title-content .date {
+        color: #666;
+        font-size: 18px;
+      }
+      .announcement-description-container {
+        width: 100%;
+        padding: 0 60px;
+      }
+      .announcement-description-content {
+        max-width: 1440px;
+        margin: 0 auto;
+      }
+      .announcement-description-content p {
+        margin-bottom: 20px;
+      }
+      .announcement-description-content p:last-child {
+        margin-bottom: 0;
+      }
+      .announcement-description-content .read-more {
+        margin-top: 40px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header-wrapper">
+      <div class="header">
+        <ul class="menu">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="publications.html">Publications</a>
+          </li>
+          <li>
+            <a href="appearances.html">Appearances</a>
+          </li>
+          <li>
+            <a href="announcements.html">Announcements</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="news-wrapper">
+      <div class="news" 
+           x-data="{ 
+             posts: $store.posts.posts.filter(post => post.tag === 'Announcements'),
+             init() {
+               console.log('Filtered posts:', this.posts);
+             }
+           }">
+        <!-- Debug output -->
+        <template x-if="posts.length === 0">
+          <div>No announcements found</div>
+        </template>
+
+        <template x-for="post in posts">
+          <div>
+            <div class="announcement-title-container">
+              <div class="announcement-title-content">
+                <h1 x-html="post.title"></h1>
+                <div class="date" x-text="post.date"></div>
+                <div class="tag" x-text="post.tag" style="display: none;"></div>
+              </div>
+            </div>
+            <div class="announcement-description-container">
+              <div class="announcement-description-content">
+                <div x-html="post.description"></div>
+                <p>
+                  <a
+                    :href="post.href"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="read-more"
+                    >Read more<img
+                      src="arrow_top_right.svg?v=1.0"
+                      class="expand-indicator"
+                  /></a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </template>
+      </div>
+    </div>
+  </body>
+</html> 
